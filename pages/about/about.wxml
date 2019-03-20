@@ -1,0 +1,24 @@
+<view class="about-warp p_20">
+    <view class="logo-warp p_20 flex_cb">
+      <view class="name">{{name}}</view>
+      <image src="{{logo}}" class="logo" />
+    </view>
+    <view class="nav-warp">
+        <view class="nav-item bor_b" bindtap="toCall">
+            <view class="left">
+                <image class="icon" src="../../images/call.png" />
+                <text>{{phone}}</text>
+            </view>
+            <image class="arrow" src="../../images/last_Dawn.png"></image>
+        </view>
+        <view class="nav-item bor_b">
+            <view class="left">
+                <image class="icon" src="../../images/position.png" />
+                <text>{{address}}</text>
+            </view>
+            <image class="arrow" src="../../images/last_Dawn.png"></image>
+        </view>
+    </view>
+    <map id="map" class='mt_20' longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" scale="14"  bindtap="toPosition" show-location style="width: 100%; height: 500rpx;"></map>
+    <navigator class='flex_af f_28 p_40' target="miniProgram" open-type="navigate" appId="wx1773ca9a5221af5b">技术支持 @ 风擎网络科技</navigator>
+</view>

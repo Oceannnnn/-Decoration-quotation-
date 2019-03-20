@@ -1,0 +1,45 @@
+<!--index.wxml-->
+<view class='main_header'>
+  <swiper indicator-dots interval="3000" duration="1000" autoplay='true' circular>
+    <block wx:for="{{imgUrls}}" wx:key="{{itemName}}" wx:for-item="itemName">
+      <swiper-item>
+        <image src="{{itemName.pic}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='p_20 f_32'>
+  <view class='w100 tc home_header'>估算我的装修预算</view>
+  <view class='w100 tc c_999 mt_10 f_28'>- 给您专业、公正、透明的装修报价 -</view>
+  <view class='home_body mt_20'>
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+      <view class="picker p_20 bor_b input">
+        <view class='c_808' hidden='{{index==0}}'>请选择城市</view> 
+        {{multiArray[index][multiIndex[index]]}} {{multiArray[index+1][multiIndex[index+1]]}}
+      </view>
+    </picker>
+    <view class='flex_cb p_20 bor_b flex_cb'>
+      请输入户型
+    </view>
+    <view class='flex_i input_body'>
+      <view class='flex_cb p_20 bor_b s_input bor_r'>
+        <input class='w100' placeholder='总面积' bindinput='bindArea' type='digit' value='{{area}}'></input>
+        <image src='../../images/pf.png' class='pf'></image>
+      </view>
+      <view class='flex_cb s_input {{(idx+1)%3==0?"":"bor_l"}} p_20 bor_b' wx:for="{{houseArr}}" wx:key="houseArr" wx:for-index="idx" bindtap='bindtap' data-index='{{idx}}'>
+        <input class='input_w' focus="{{item.focus}}" placeholder='几' type='number' value='{{item.number}}' data-max_num='{{item.max_num}}' bindinput='bindHouse' data-index='{{idx}}'></input>
+        {{item.name}}
+      </view>
+    </view>
+    <view class='flex_cb p_20 input'>
+      <picker bindchange="bindLevelChange" value="{{levelIndex}}" range-key="{{'name'}}" range="{{levelArray}}">
+        <view class="picker">
+        <view class='c_808' hidden='{{levelIndex!=-1}}'>请选择装修档次</view> 
+          {{levelArray[levelIndex].name}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class='footer f_32 c_f tc mt_20' bindtap='next'>立即计算</view>
+  <view class='flex_af f_28 mt_20'>技术支持 @ 风擎网络科技</view>
+</view>

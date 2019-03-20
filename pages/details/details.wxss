@@ -1,0 +1,127 @@
+/* pages/details/details.wxss */
+.nav-scroll {
+  width:100%;
+  /* color:#555; */
+  background:#fff;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:100;
+}
+.nav-name .nav-hover {
+  color:#F9A75E;
+  border-bottom:2px solid #F9A75E;
+}
+.nav-name {
+  display:inline-block;
+  border-bottom:2px solid transparent;
+  width:22%;
+  text-align:center;
+  padding:30rpx 0;
+}
+.nav-scroll{
+  box-shadow: 1px 1px 6px #eee;
+}
+.scroll-view_H{
+  white-space:nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+.nav-name{
+  width: auto;
+  padding: 30rpx;
+}
+.details-scroll{
+  margin: 100rpx 0 180rpx;
+}
+.table{
+  width: 100%;
+  border: 1px solid #dadada;
+  border-right: 0;
+  border-bottom: 0;
+  position: relative;
+}
+.tr{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.td,.th{
+  padding: 20rpx;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width: 15%;
+}
+.th:nth-child(1){width:20%}
+.td:nth-child(1){width:20%}
+.th:nth-child(3){width:22%}
+.td:nth-child(3){width:22%}
+.th:nth-child(4){width:50%}
+.td:nth-child(4){width:50%}
+.th:last-child{width:48%}
+.td:last-child{width:48%}
+.th{
+  font-weight: 400;
+  background-color: #dadada;
+}
+.btn{
+  background:#555;
+  color: #fff;
+  width: 50%;
+  padding: 5rpx;
+  border: 1px solid #dadada;
+}
+.left{
+  width: 50%;
+}
+.modify_body{
+  width: 80%;
+  height: 700rpx;
+  border: 1px solid #dadada;
+  position: fixed;
+  top: 20%;
+  left: 10%;
+  overflow: scroll;
+  background: #fff;
+  z-index: 102;
+}
+.mo_item{
+  padding: 40rpx;
+}
+.zhe{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 101;
+}
+.cha{
+  justify-content: flex-end;
+}
+.footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  box-shadow: 1px 1px 5px #dadada;
+  padding: 30rpx 0;
+}
+.com_btn{
+  width: 60%;
+  background: #F9A75E;
+  color: #fff;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 10rpx;
+}
+.right{
+  width: 40%;
+  align-items: flex-end;
+}
+.left_on{
+  width: 100%;
+}

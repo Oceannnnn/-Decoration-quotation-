@@ -1,0 +1,7 @@
+/* pages/erwei/erwei.wxss */
+.image{
+  width: 80%;
+  position: absolute;
+  top: 120rpx;
+  left: 10%;
+}

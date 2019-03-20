@@ -1,0 +1,48 @@
+/**index.wxss**/
+.main_header swiper{
+  height:370rpx; 
+  width: 100%;
+}
+.main_header swiper image{
+  width: 100%;
+  height: 100%;
+}
+.home_header{
+  font-size: 38rpx;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.home_body{
+  border: 1px solid #dbdbdb;
+}
+.input{
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.c_808{
+  color: #808080;
+}
+.pf{
+  width: 50rpx;
+  height: 50rpx;
+}
+.s_input{
+  width: 33.33%;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  height: 90rpx;
+}
+.input_body{
+  flex-wrap: wrap;
+}
+.input_w{
+  width: 45%;
+}
+checkbox{
+  transform: scale(0.7)
+}
+.footer{
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #F9A75E;
+}

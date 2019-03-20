@@ -1,0 +1,15 @@
+/* pages/area/area.wxss */
+@import '../index/index.wxss';
+.area_input{
+  height: 100%;
+}
+.input{
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.area_left{
+  min-width: 20%;
+}
+.home_body{
+  padding: 0 20rpx;
+}

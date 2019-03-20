@@ -1,0 +1,17 @@
+/* pages/result/result.wxss */
+.result{
+  margin-top: 80rpx;
+}
+.item{
+  width: 46%;
+  padding: 15rpx 0;
+  margin: 80rpx 5% 0;
+  border: 1px solid #ccc;
+}
+.zhu{
+  margin: 20rpx 5% 0;
+}
+.item.on{
+  color: #F9A75E;
+  border: 1px solid #F9A75E;
+}

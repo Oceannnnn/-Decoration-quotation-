@@ -1,0 +1,48 @@
+/* pages/myOffer/myOffer.wxss */
+.page{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.nav-scroll{
+  width: 100%;
+  color: #666;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.scroll-view_H{
+  white-space:nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+.nav-name{
+  display:inline-block;
+  width: 50%;
+  text-align: center;
+  padding: 30rpx 0;
+}
+.nav-hover{
+  color: #0EC9C3;
+  border-bottom: 2px solid #0EC9C3;
+}
+.scroll_body{
+  margin-top: 100rpx;
+}
+.c_f9a{
+  color: #F9A75E;
+}
+.btn{
+  background: #F9A75E;
+  border-radius: 10rpx;
+}
+.btn.on{
+  background: #fff;
+  color: #666;
+  border: 1px solid #666;
+}
+button.btn{
+  padding: 0 20rpx;
+  font-size: 32rpx; 
+}

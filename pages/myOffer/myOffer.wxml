@@ -1,0 +1,42 @@
+<!--pages/myOffer/myOffer.wxml-->
+<view class="nav-scroll f_32 bg_f bor_t bor_b">
+  <view class="scroll-view_H">
+    <view wx:for="{{HeaderList}}" wx:key="item" data-id="{{item.id}}" bindtap='toList' class="nav-name">
+      <text class="{{item.id == currentId ? 'nav-hover' : ''}} p_20">{{item.name}}</text>
+    </view>
+  </view>
+</view>
+<view class='scroll_body'>
+  <view wx:if="{{list!=''}}">
+    <view class='item bor_bom p_20 f_32' wx:for="{{list}}" wx:key="list" catchtap='{{currentId==1?"":"bindtap"}}' data-order_no='{{item.order_no}}'>
+      <view class='flex_cb bor_b'>
+        <view class='mb_20'>订单号:{{item.order_no}}</view>
+        <view class='c_f9a mb_20'>{{item.status}}</view>
+      </view>
+      <view class='bor_b mt_20'>
+        <view class='mb_20'>城市：{{item.city}}</view>
+        <view class='mb_20'>面积：{{item.area}}</view>
+        <view class='mb_20'>户型：{{item.house_type}}</view>
+        <view class='mb_20'>装修档次：{{item.decorate_level}}</view>
+      </view>
+      <view class='mt_20 flex_cb'>
+        <view class='c_999 f_30'>{{item.pay_time}}</view>
+        <view class='flex_i'>
+          <button class='btn c_f p_20' bindtap='bindtap' wx:if="{{currentId==1}}" data-order_no='{{item.id}}' disabled="{{disabled}}">立即付款</button>
+          <view wx:else class='flex_i'>
+            <view class='btn c_f p_20 mr_20' bindtap='bindtap'data-order_no='{{item.order_no}}'>查看详情</view>
+            <view class='btn c_f p_20 on' catchtap='sendEmail' data-order_no='{{item.order_no}}'>发送到邮箱</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class='flex_af'>
+    <image src='../../images/zanwu.png' class='zanwu mb_20'></image>
+    <text class='f_32 c_999'>暂无数据</text>
+  </view>
+</view> 
+<modal hidden="{{hiddenmodalput}}" title="请输入邮箱" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+    <input type='text' placeholder="请输入邮箱" value='{{email}}' bindinput='bindEmail' auto-focus/>  
+</modal> 
+

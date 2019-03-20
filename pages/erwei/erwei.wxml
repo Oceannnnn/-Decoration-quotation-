@@ -1,0 +1,2 @@
+<!--pages/erwei/erwei.wxml-->
+<image src='../../images/erwei.jpg' class='image' mode='widthFix'></image>

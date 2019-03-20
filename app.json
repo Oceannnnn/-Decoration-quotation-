@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/erwei/erwei",
+    "pages/area/area",
+    "pages/details/details",
+    "pages/result/result",
+    "pages/myOffer/myOffer",
+    "pages/toLogin/toLogin",
+    "pages/smallRoutine/smallRoutine",
+    "pages/about/about",
+    "pages/my/my"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "报价神器",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#A3A3A3",
+    "backgroundColor": "#fff",
+    "selectedColor": "#333333",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "专业报价",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_ac.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "个人中心",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_ac.png"
+      }
+    ]
+  }
+}

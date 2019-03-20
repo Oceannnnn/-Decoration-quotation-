@@ -1,0 +1,6 @@
+/* pages/toLogin/toLogin.wxss */
+image{
+  margin: 100rpx 0 50rpx;
+  width: 200rpx;
+  height: 200rpx;
+}

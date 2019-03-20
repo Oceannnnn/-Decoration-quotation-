@@ -1,0 +1,38 @@
+<!--pages/my/my.wxml-->
+<view class="my-wrap">
+  <view class="top-info f_32 p_40 bor_b">
+    <navigator wx:if="{{state==0}}" class='flex_i pr' url='../toLogin/toLogin'>
+      <image class="avatar mr_20" src="../../images/wu.png"></image>
+      <view>未登录 <text class='f_28 c_999'>(请点击登录)</text> </view>
+    </navigator>
+    <view wx:else class="mb_20 flex_i">
+      <view class='avatar mr_20'>
+        <image class="mr_20 w100" src="{{userInfo.avatarUrl}}" mode="widthFix"></image>
+      </view>
+      <view class="nickname">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="nav-warp f_32">
+    <view class="nav-item p_40 bor_b flex_cb" bindtap='myOffer'>
+      <view>我的报价</view>
+      <image class="arrow" src="../../images/last_Dawn.png"></image>
+    </view>
+    <view class="nav-item p_40 bor_b flex_cb" bindtap='about'>
+      <view>联系我们</view>
+      <image class="arrow" src="../../images/last_Dawn.png"></image>
+    </view>
+    <navigator class="nav-item p_40 bor_b flex_cb" url='../erwei/erwei'>
+      <view>小程序二维码</view>
+      <image class="arrow" src="../../images/last_Dawn.png"></image>
+    </navigator>
+    <view class="nav-item p_40 bor_b flex_cb">
+      <button class='formBtn' open-type='share'></button>
+      <view>推荐给朋友</view>
+      <image class="arrow" src="../../images/last_Dawn.png"></image>
+    </view>
+    <navigator class="nav-item p_40 bor_b flex_cb" url='../smallRoutine/smallRoutine'>
+      <view>我也要做小程序</view>
+      <image class="arrow" src="../../images/last_Dawn.png"></image>
+    </navigator>
+  </view>
+</view>

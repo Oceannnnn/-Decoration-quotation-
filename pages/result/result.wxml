@@ -1,0 +1,18 @@
+<!--pages/result/result.wxml-->
+<view class='flex_af result'>
+<!-- warn -->
+  <icon type="{{result==1?'success':'warn'}}" size="50"/>
+  <view class='mt_20 f_34'>
+    <text wx:if="{{result==1}}">支付成功</text>
+    <text wx:else>支付失败</text>
+  </view>
+</view>
+<view class='flex_i f_32 tc'>
+<!-- 重新支付 -->
+  <view class='item on' bindtap='bindtap'>
+    <text wx:if="{{result==1}}">查看报价订单</text>
+    <text wx:else>重新支付</text>
+  </view>
+  <navigator class='item' open-type='switchTab' url='../index/index'>返回首页</navigator>
+</view>
+<view class='c_999 f_30 zhu'>注：如有疑问，请联系客服人员。</view>

@@ -1,0 +1,54 @@
+<!--pages/details/details.wxml-->
+<view class="nav-scroll f_32 bor_t">
+  <scroll-view class="scroll-view_H" scroll-x="true">
+    <view wx:for="{{list}}" wx:key="list" data-id="{{item.id}}" bindtap='toList' class="nav-name" data-index="{{index}}">
+      <text class="p_20 {{item.id == curIndex ? 'nav-hover' : ''}}">{{item.name}}</text>
+    </view>
+  </scroll-view>
+</view>
+<view class='details-scroll p_20'>
+  <view class="table mt_20 f_30">
+    <view class="tr f_32 header">
+      <view class="th flex_ja">项目</view>
+      <view class="th flex_ja">单位</view>
+      <view class="th flex_ja">数量</view>
+      <view class="th flex_ja">总价（元）</view>
+      <view class="th flex_ja">品牌</view>
+    </view>
+    <view class="tr" wx:for="{{list[curNav].item}}" wx:key="itemName" wx:for-item="itemName" wx:for-index="idx">
+      <view class="td flex_ja">{{itemName.name}}</view>
+      <view class="td flex_ja">{{itemName.unit}}</view>
+      <view class="td flex_ja">{{itemName.num}}</view>
+      <view class="td flex_ja">{{itemName.line_totel}}</view>
+      <view class="td flex_cb">
+        <view class='flex_ja {{list[curNav].change_brand== 1?"left":"left_on"}}'>{{itemName.brand_name}}</view>
+        <view class='btn tc f_28' wx:if="{{list[curNav].change_brand== 1}}" bindtap='bindChange' data-indexchange='{{idx}}' data-brand_id='{{itemName.decorate_id}}'>
+          修改品牌
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='flex_i f_34 bor_b'>
+    <view class="p_20 flex_ja bor_r w100">小计</view>
+    <view class="p_20 flex_ja w100">{{list[curNav].total}}</view>
+  </view>
+</view>
+<view hidden='{{hidden}}'>
+  <view class='zhe'></view>
+  <view class='modify_body'>
+    <view class='array_body p_20'>
+      <view class='cha flex_i' bindtap='cha'>
+        <image src='../../images/cha.png' class='arrow'></image>
+      </view>
+      <view class='f_34 tc'>请选择品牌</view>
+      <view class='f_30 mo_item bor_b' wx:for="{{array}}" wx:key="array" bindtap='modifyBtn' data-name='{{item.name}}' data-id='{{item.id}}'>{{item.name}}</view>
+    </view>
+  </view>
+</view>
+<view class='footer flex_cb'>
+  <view class='ml_20 f_34'>总价：￥{{sum}}</view>
+  <view class='right flex_af mr_20' bindtap='next' wx:if='{{list[curNav].change_brand== 1}}'>
+    <button class='com_btn tc f_30' disabled="{{disabled}}">确认修改</button>
+    <view class='f_28 c_999'>注：需支付{{pay_money}}元</view>
+  </view>
+</view>

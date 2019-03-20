@@ -1,0 +1,19 @@
+<!--pages/area/area.wxml-->
+<view class='w100 tc bor_t'>
+  <view class='home_header mt_10'>- 户型面积信息 -</view>
+  <view class='c_999 f_30 mt_20'>[请正确填写，确报价的准确性]</view>
+</view>
+<view class='p_20 f_32'>
+  <view class='home_body'>
+    <view class='{{list.length-1==idx?"":"bor_b"}}' wx:for="{{list}}" wx:key="list" wx:for-index="idx">
+      <view class='flex_cb'>
+        <view class='flex_i input'>
+          <view class='area_left'>{{item.name}}</view>
+          <input class='ml_20 area_input' value='{{item.area}}' placeholder='请填写面积' type='digit' bindinput='bindinput' data-index='{{idx}}'></input>
+        </view>
+        <image src='../../images/pf.png' class='pf'></image>
+      </view>
+    </view>
+  </view>
+  <button class='footer f_32 c_f tc mt_20' bindtap='next' disabled="{{disabled}}">立即计算</button>
+</view>
